@@ -1,0 +1,26 @@
+.wrapper {
+  margin: 100px;
+}
+
+.rightAni {
+  height: 50px;
+  background-color: transparent;
+  border: 1px solid #74b816;
+  color: #74b816;
+  border-radius: 2rem;
+  transition: background-color 0.5s ease-in-out, color 2s ease-in-out, width 1s ease-in-out,
+    height 1s ease-in-out;
+  width: 50px;
+  overflow: hidden;
+}
+
+.rightAni:focus {
+  outline: none;
+}
+
+.active {
+  width: 200px;
+  height: 60px;
+  background-color: #74b816;
+  color: #fff;
+}
