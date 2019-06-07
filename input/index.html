@@ -14,27 +14,19 @@
         <span class="focusAni"></span>
       </div>
 
-      <div class="moveWrapper">
-        <input type="text" id="inputTwo" placeholder="Fill Me..." />
-        <button id="moveButton">click</button>
+      <div class="moveInputWrapper">
+        <input type="text" class="inputTwo" placeholder="Fill Me..." />
+        <button class="moveButton">click</button>
         <span class="line"></span>
       </div>
     </div>
   </body>
-
   <script>
-    let dx = 6;
-    const handleClick = id => {
-      const curWidth = document.querySelector('.moveWrapper').clientWidth;
-
-      if (curWidth < 200) {
-        const nextWidth = curWidth + dx;
-        document.querySelector('.moveWrapper').style.width = `${nextWidth}px`;
-        document.querySelector('.line').style.width = `${nextWidth}px`;
-        requestAnimationFrame(handleClick);
-      }
-    };
-
-    document.querySelector('#moveButton').addEventListener('click', handleClick);
+    document.querySelector('.moveButton').addEventListener('click', e => {
+      e.target.classList.toggle('activeButton');
+      document.querySelector('.inputTwo').classList.toggle('activeInput');
+      document.querySelector('.line').classList.toggle('activeLine');
+      console.log(e.target.classList);
+    });
   </script>
 </html>
