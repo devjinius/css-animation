@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="inputWrapper">
+        <input type="text" id="inputAni" placeholder="Fill Me..." />
+        <span class="focusAni"></span>
+      </div>
+
+      <div class="moveWrapper">
+        <input type="text" id="inputTwo" placeholder="Fill Me..." />
+        <button id="moveButton">click</button>
+        <span class="line"></span>
+      </div>
+    </div>
+  </body>
+
+  <script>
+    let dx = 6;
+    const handleClick = id => {
+      const curWidth = document.querySelector('.moveWrapper').clientWidth;
+
+      if (curWidth < 200) {
+        const nextWidth = curWidth + dx;
+        document.querySelector('.moveWrapper').style.width = `${nextWidth}px`;
+        document.querySelector('.line').style.width = `${nextWidth}px`;
+        requestAnimationFrame(handleClick);
+      }
+    };
+
+    document.querySelector('#moveButton').addEventListener('click', handleClick);
+  </script>
+</html>
