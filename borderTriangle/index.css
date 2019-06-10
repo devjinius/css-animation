@@ -1,0 +1,42 @@
+.wrapper {
+  margin: 100px;
+  width: 500px;
+  height: 500px;
+}
+
+.wrapper > * {
+  margin-bottom: 10px;
+}
+
+.triangle-leftTop {
+  width: 100px;
+  height: 100px;
+  box-sizing: border-box;
+  border-top: 100px solid blue;
+  border-right: 100px solid transparent;
+}
+
+.triangle-rightTop {
+  width: 100px;
+  height: 100px;
+  box-sizing: border-box;
+  border-top: 100px solid blue;
+  border-left: 100px solid transparent;
+}
+
+.triangle-rightBottom {
+  width: 100px;
+  height: 100px;
+  box-sizing: border-box;
+  border-bottom: 100px solid blue;
+  border-left: 100px solid transparent;
+}
+
+.triangle-top {
+  width: 100px;
+  height: 100px;
+  box-sizing: border-box;
+  border-top: 100px solid blue;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+}
