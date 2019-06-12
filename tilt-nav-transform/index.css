@@ -1,0 +1,83 @@
+body {
+  margin: 0px;
+}
+
+.nav {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+}
+
+.tilt {
+  background-color: #000;
+  text-align: right;
+  height: 100%;
+  width: 20vw;
+  padding: 0px;
+  margin: 0px;
+  opacity: 0;
+  transition: opacity 0.8s, transform 1.3s;
+  transform: translate(-20vw, 0px);
+}
+
+.tilt::after {
+  position: absolute;
+  top: 0px;
+  left: 20vw;
+  content: '';
+  height: 0;
+  width: 0;
+  border-top: 100vh solid #000;
+  border-right: 12vw solid transparent;
+  overflow: hidden;
+}
+
+.tilt > ul {
+  color: #fff;
+  padding: 20vh 0;
+  margin: 0;
+}
+
+.tilt > ul li {
+  margin-bottom: 1rem;
+  transform: translate(-5vw, 0px);
+}
+
+.active > ul li {
+  margin-bottom: 1rem;
+  transform: translate(0, 0px);
+}
+
+li {
+  transition: transform 1.5s;
+}
+
+.tiltControl {
+  position: absolute;
+  width: 80px;
+  height: 30px;
+  margin: 20px;
+  background-color: transparent;
+  border-radius: 1rem;
+  z-index: 100;
+  transition: border 2s, color 2s;
+}
+
+.tiltControl:focus {
+  outline: none;
+}
+
+.activate {
+  border: 1px solid green;
+  color: black;
+}
+
+.inactivate {
+  border: 1px solid #fff;
+  color: #fff;
+}
+
+.active {
+  opacity: 1;
+  transform: translate(0px, 0px);
+}
